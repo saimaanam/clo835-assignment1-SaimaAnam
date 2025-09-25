@@ -39,3 +39,10 @@ export APP_COLOR=blue
 ```
 ### Run the application, make sure it is visible in the browser
 ```docker run -p 8080:8080  -e DBHOST=$DBHOST -e DBPORT=$DBPORT -e  DBUSER=$DBUSER -e DBPWD=$DBPWD  my_app```
+
+
+git checkout -b feature-test
+echo "test" >> README.md
+git add .
+git commit -m "Testing workflow"
+git push origin feature-test
