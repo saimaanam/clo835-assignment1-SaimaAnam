@@ -36,6 +36,7 @@ jobs:
           docker build -t clo835-webapp -f Dockerfile .
           docker tag clo835-webapp:latest 767398033131.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:latest
           docker push 767398033131.dkr.ecr.us-east-1.amazonaws.com/clo835-webapp:latest
+        
 
       - name: Build, tag, and push MySQL image
         run: |
