@@ -110,6 +110,22 @@ def FetchData():
     return render_template("getempoutput.html", id=output["emp_id"], fname=output["first_name"],
                            lname=output["last_name"], interest=output["primary_skills"], location=output["location"], color=color_codes[COLOR])
 
+def home_page():
+    return render_template('addemp.html', color=color_codes[COLOR])
+
+# Keep your existing routes...
+@app.route("/", methods=['GET', 'POST'])
+def home():
+    return home_page()
+
+# Option 1: explicit paths
+@app.route("/blue")
+@app.route("/pink")
+@app.route("/lime")
+def color_paths():
+    return home_page()
+
+
 if __name__ == '__main__':
     
     # Check for Command Line Parameters for color
