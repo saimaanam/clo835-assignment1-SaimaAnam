@@ -125,7 +125,6 @@ def home():
 def color_paths():
     return home_page()
 
-
 if __name__ == '__main__':
     
     # Check for Command Line Parameters for color
